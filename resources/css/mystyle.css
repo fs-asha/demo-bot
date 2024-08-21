@@ -1,0 +1,252 @@
+body {
+	overflow-x: hidden
+}
+.row{
+	margin:0 !important;
+}
+.boxed{
+	box-shadow: 0px 0px 5px 1px #CCC;
+	border-radius:10px;
+	margin:10px !important;
+}
+
+.wrap {
+	width: 100%;
+	margin: 0 auto
+}
+.downloadbtn button {
+    background: #000;
+    color: #fff !important;
+    font-size: 14px;
+    padding-left: 9%;
+    padding-right: 9%;
+    border-radius: 0;
+    margin-top: 14px;
+    outline: 0 !important;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.header {
+	padding: .9% 1%;
+	box-shadow: 0 1px 3px -1px #25476f
+}
+
+.gelogo {
+	float: left
+}
+
+.gelogo img {
+	width: 27%
+}
+
+.menuicon {
+	float: right
+}
+
+.menuicon a img {
+	width: 3%;
+	float: right
+}
+
+.myMnus {
+	position: absolute;
+	width: 229px;
+	z-index: 999999 !important;
+	right: 249px;
+	background: #333333;
+	text-align: left;
+	color: #fff;
+	box-shadow: 0 2px 3px #25476f;
+	box-shadow: 0 2px 3px #25476f;
+	transform: translate(100%, 0)
+}
+
+.myMnus a {
+	text-decoration: none
+}
+
+.mnus {
+	font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
+		Meiryo, sans-serif;
+	text-transform: capitalize;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 12px;
+	margin-bottom: 0;
+	font-size: 15px;
+	text-align: left;
+	color: #fff;
+	width: 100%;
+	background: #333333;
+	text-decoration: none;
+	box-shadow: 0 2px 3px #25476f;
+	z-index: 5 !important
+}
+
+.mnus:focus, .mnus:hover {
+	background: #ccc;
+	color: #333333;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc
+}
+
+.nohovermenu {
+	font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
+		Meiryo, sans-serif;
+	text-transform: capitalize;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 12px;
+	margin-bottom: 0;
+	font-size: 13px;
+	text-align: left;
+	color: #fff;
+	width: 100%;
+	background: #333333;
+	text-decoration: none;
+	box-shadow: 0 2px 3px #25476f;
+	z-index: 5 !important
+}
+
+.nohovermenu a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	cursor: context-menu;
+	font-weight: 600;
+	padding: 2% 0
+}
+
+.mnus a {
+	color: #fff;
+	text-decoration: none;
+	display: block
+}
+
+.mnus a:hover {
+	color: #25476f !important;
+	text-decoration: none
+}
+
+.conversationpan {
+	margin: 0
+}
+
+.conversationpan .convpan {
+	margin: 0;
+	width: 48%;
+	margin-left: 1%
+}
+
+.convleftpan {
+	margin: 0;
+	background: #fdfcfc;
+	padding: 2% 1%
+}
+
+.convleftpan span {
+	font-size: 19px
+}
+
+.avgright label {
+	padding-top: 1%
+}
+
+.avgleft {
+	text-align: right
+}
+
+.conversationpan div div {
+	margin: 0
+}
+
+.menuicon i {
+	font-size: 2.2em;
+	color: #fff;
+	margin: 6px 10px
+}
+
+.daterange {
+	margin-top: 1%
+}
+
+.daterange input {
+	width: 100%;
+	padding: .7% 2%;
+	height: 25px
+}
+
+.totconv {
+	margin: 0
+}
+
+.totconv div {
+	padding: .9% 1%;
+	margin-right: 1%
+}
+
+.totconv label {
+	font-size: 14px
+}
+
+.totconv h3 {
+	margin: 0;
+	padding: .9% 1%;
+	border-top: 1px solid #aaa
+}
+
+.totconv1 div {
+	padding: 3.9% 3%;
+	margin-right: 1%
+}
+
+.totconv1 label {
+	font-size: 15px
+}
+
+.totconv1 h3 {
+	margin: 0;
+	padding: .9% 1%;
+	border-top: 1px solid #aaa;
+	color: #2e5b80;
+	font-size: 18px;
+	font-weight: 700
+}
+
+.tablecontent {
+	margin: 0
+}
+
+.tablecontent div {
+	margin: 0;
+	padding: 0
+}
+
+.topintent {
+	margin: 0;
+	padding: 0
+}
+
+.topintentdiv {
+	padding: 0
+}
+
+.tablecontent table {
+	width: 100%;
+	border: 1px solid #eee;
+	padding: 2%;
+	margin-left: 5%
+}
+
+th {
+	padding: 2%
+}
+
+td {
+	padding: 2%
+}
+
+/*New updates 5-July-2019*/
+label.container{width:auto;}
+.imgbtn_container{display:inline-block;border:1px solid #ccc;border-radius:3px;margin:2px}
+.imgbtn_container .imgbtn_overlay{text-align:center;}
