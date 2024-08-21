@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="no-js" lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Demo Bot</title>
+    <link href="resources/images/fav.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="resources/css/bootstrap.5.2.3.min.css">
+    <link rel="stylesheet" href="resources/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="resources/css/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="resources/css/swiper.min.css">
+    <link rel="stylesheet" href="resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="resources/css/portalchat.css">
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body class="color-theme-portal">
+    <!-- wrapper starts -->
+    <div class="wrapper">
+
+      <!-- header -->
+      <div class="header">
+          <div class="row no-gutters">
+              <div class="col-auto">
+                <div class="chat-title">
+                    Demo Bot
+                </div>                  
+              </div>
+              <div class="col text-left">
+                  <div class="header-logo">
+                      &nbsp;
+                  </div>
+              </div>
+              <div class="col-auto">
+                <div class="dropdown dropdown-headers">
+                    <button class="btn btn-link menu-btn toggle dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="custom-portal-icons cpi-menu"></i>
+                      <i class="custom-portal-icons cpi-menu-close"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" id="home">Home</a>
+                      <a class="dropdown-item" onClick="getConv('u_page')">Contact Us</a>
+                      <a class="dropdown-item start-over" id="refresh">Start over</a>
+                    </div>
+                </div>
+                <button class="btn btn-link menu-btn speaking" id="mySpeakerBtn">
+                  <i class="custom-portal-icons cpi-speaker"></i>
+                </button>
+                <button class="btn btn-link menu-btn">
+                  <i class="custom-portal-icons cpi-minimize"></i>
+                </button>
+              </div>
+          </div>
+      </div>
+      <!-- header ends -->
+
+      <!-- Chat content here -->
+      <div class="container chat-list "><!-- scroll-y : Add this class for to get footer area-->
+        <div class="message-container" id="mcon">
+          <!-- <div class="pre-loader"></div> -->
+
+          <!-- Bubble and Image-Button -->
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 1s;">
+            <div class="chat-icon"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">We do not have any required data for this service.</div>
+            </div>
+          </div>
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 1.5s;">
+            <div class="chat-icon opac"></div>
+            <div class="chat-message-wrapper">
+              <div class="chat-message-content">Is there anything else I can help you with?</div>
+            </div>
+          </div>
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 2s;">
+            <div class="chat-icon opac"></div>
+            <div class="chat-message-buttons">
+              <button class="btn btn-generic" onclick="getConv('Yes')">Yes</button>
+              <button class="btn btn-generic" onclick="getConv('No')">No</button>
+            </div>
+          </div>
+          <!-- Bubble and Image-Button -->
+
+          <!-- User Bubble -->
+          <div class="chat-message chat-message-sender animated fadeInRight" style="--delay: 2.5s;">
+            <div class="chat-icon"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">Yes</div>
+            </div>
+          </div>
+          <!-- End: User Bubble -->
+
+          <!-- Datepicker -->
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 3s;">
+            <div class="chat-icon"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">user, please answer few more questions to serve you better.</div>
+            </div>
+          </div>
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 3.5s;">
+            <div class="chat-icon opac"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">Please select your Date of Birth</div>
+            </div>
+          </div>
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 4s;">
+            <div class="chat-icon opac"></div>
+            <div class="select-date-wrapper">
+              <input type="text" class="select-date" id="dp1" value="10/04/1985" />
+              <i class="calendar-icons"></i>
+              <script>
+                $(document).ready(function(){
+                  $('#dp1').datepicker({
+                    maxDate: -1,
+                    changeMonth: true,
+                    changeYear: true,
+                    dateFormat: 'dd/mm/yy',
+                    yearRange: '-60:+00',
+                    onSelect: function(dates) {
+                      $('#usertext').val(this.value)
+                    }
+                  });
+                })
+              </script>
+            </div>
+          </div>                    
+          <!-- End: Datepicker -->
+
+          <!-- User Bubble -->
+          <div class="chat-message chat-message-sender animated fadeInRight" style="--delay: 4.5s;">
+            <div class="chat-icon"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">10/04/1985</div>
+            </div>
+          </div>
+          <!-- End: User Bubble -->
+
+          <!-- Final consultant block -->
+          <div class="chat-message chat-message-recipient animated fadeIn" style="--delay: 5s;">
+            <div class="chat-icon"></div>
+            <div class="chat-message-wrapper">
+               <div class="chat-message-content">Thank you!</div>
+            </div>
+          </div>
+          <!-- End: Final consultant block -->
+
+          <!-- Messages append here -->
+        </div>
+
+        <!-- Loading Conv -->
+        <div class="chat-message chat-message-recipient animated fadeInLeft" id="loading">
+          <img src="resources/images/loading.svg" class="botloader" />
+        </div>
+      </div>
+      <!-- Chat content ends -->
+
+      <!-- footer -->
+      <div class="footer px-3" id="footer">
+        <!-- Error block -->
+        <div class="errorS_block">
+          <div class="content"></div>  
+        </div>
+        <!--./Error block -->
+        <div id="overlayforchat"></div>
+        <form name="uinput" id="form-message" action="">
+          <div class="row ">
+              <div class="col col-input-refresh">
+                  <button class="btn btn-refresh refreshbtn" title="Restart" id="ref" type="button">
+                    <svg viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.181a.75.75 0 0 1 1.177-.616l4.432 3.068a.75.75 0 0 1 0 1.234l-4.432 3.068A.75.75 0 0 1 12 8.32V6a7 7 0 1 0 7 7 1 1 0 1 1 2 0 9 9 0 1 1-9-9V2.181z" />
+                    </svg>
+                  </button>
+                  <div class="form-group float-label my-2">
+                      <input type="text" id="usertext" class="form-control" autofocus placeholder="Type a message" autocomplete="off" />
+                      <!-- <label for="usertext" class="form-control-label">Type your message here</label> -->
+                  </div>
+              </div>
+              <div class="col-auto pl-0 align-self-center">
+                  <button class="btn btn-send" title="Send Query" id="send" type="submit">
+                    <svg viewBox="0 0 32 32">
+                      <path d="M30.291,2.87l-9.581,25.26c-0.39,1.029-1.346,1.234-2.123,0.456c0,0-6.036-6.036-6.586-6.586
+                        s-0.359-1.631,0.425-2.403l13.316-13.11c0.784-0.772,0.711-0.856-0.163-0.187L10.588,17.784c-0.873,0.669-2.224,0.58-3.002-0.198
+                        l-4.172-4.172c-0.778-0.778-0.573-1.733,0.456-2.124l25.26-9.581C30.159,1.319,30.681,1.841,30.291,2.87z M8.707,20.121
+                        C8.318,19.732,8,19.864,8,20.414V25c0,0.55,0.386,0.768,0.857,0.485l2.401-1.441c0.472-0.283,0.539-0.833,0.15-1.222L8.707,20.121z"
+                        />
+                    </svg>
+                  </button>
+                  <input type="submit" hidden/>
+                  <div class="btn btn-mic mic-btn"><!--<i class="fa fa-microphone" ></i> --><div class="av-micb1"></div></div>
+                  <div class="spinner" title="Processing audio" style="display:none;"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+              </div>
+          </div>
+        </form>
+        <button id="playbutton" hidden></button>  
+      </div>
+      <!-- footer ends -->
+  </div>
+  <!-- wrapper ends -->
+
+  <!-- Session Expired -->    
+  <div class="modal fadeOut" id="errormodel">
+		<div class="modal-dialog" style="margin:0;border:1px #bcbcbc solid;height:100%">
+			<div class="modal-content bmd-modalContent" style="height:100%">
+        <div class="modal-body" style="padding:1px;height:100%">          
+            <div class="close-button" style="display:none;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+              
+            <div class="showchatbox_name" style="display: block;height:100%">
+                <img src="resources/images/demo-v1/ChatRoboGE.png" width="100" style="padding-bottom:15px;">
+                <h4>It seems you are idle for long time <br/> or <br/> started conversation in new tab.<br/>Please refresh if you want to continue.</h4>
+              <p><br>
+              <button id="error_refresh" class="btn btn-refresh-modal">Refresh</button>
+              </p>
+              <div  style="position: relative;left: 48%;">
+                <img class="spinner" style="display: none;" src="resources/images/Spinners/spinner.gif" alt="Spinner">
+            </div>
+            </div>
+          <div >
+          </div>
+				</div> 
+
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+  
+  <!-- Welcome modal: Enter number -->    
+  <div class="modal fadeOut" id="myEnterNameModal">
+		<div class="modal-dialog" style="margin:0;border:1px #bcbcbc solid;height:100%">
+			<div class="modal-content bmd-modalContent" style="height:100%">
+        <div class="modal-body" style="padding:1px;height:100%">          
+          <!-- Content start -->
+          <!-- header -->
+          <div class="header">
+            <div class="row no-gutters">
+                <div class="col-auto">
+                  <div class="chat-title">
+                      Demo Bot
+                  </div>                  
+                </div>
+                <div class="col text-left">
+                    <div class="header-logo">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-auto">
+                  <button class="btn btn-link menu-btn">
+                    <i class="custom-portal-icons cpi-minimize"></i>
+                  </button>
+                </div>
+            </div>
+        </div>
+        <!-- header ends -->
+          <div class="container-fluid bg-template ">
+            <div class="row hn-154 position-relative">
+              <img
+              src="resources/images/demo-v1/ChatRoboGE.png"
+              class="section-bot-icon"
+              alt="..."
+              style="max-width: 100px;"
+              />
+              <h5 class="text-center mt-3">Hi, Welcome to Demo Bot!</h5>
+              <p class="text-center">I am your Virtual assistant;please share your mobile number.</p>
+              <div class="form-group">
+                <select class="countryCodePick" id="cc-dropdown" name="locality"></select>
+                <input placeholder="Enter mobile" type="text" maxlength="15" minlength="8" id="username" name="username" value="<%=userNameInSession %>" class="nameinput" autofocus autocomplete="off"/>
+                <input type="hidden" id="hiddenusername" value="<%=userNameInSession %>" />                
+              </div>
+              <div class="errormessage"></div>
+              <div class="form-group form-group-btn">
+                <!--<button id="skipName" data-dismiss="modal" class="btn yesnobtn yesnobtngrey">Skip</button> -->
+                <button id="submitName" class="btn btn-generic btn-get-start">
+                  Get Started
+                  &nbsp;<svg xmlns="http://www.w3.org/2000/svg" style="width: 15px;height: 15px;" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 4L13 12L5 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11 4L19 12L11 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- End: Content -->
+				</div> 
+
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
+    <!-- Scripts -->
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/fsclient.js"></script>
+    <script src="resources/js/moment.min.js"></script>
+	  <script src="resources/js/moment-timezone.js"></script>
+    <script src="resources/js/ion.rangeSlider.js"></script>
+    <script src="resources/js/bootstrap-filestyle.js"></script>
+    <script src="resources/js/jquery-ui.min.js"></script>
+    <script src="resources/js/swiper.min.js"></script>
+    <script src="resources/js/select2.full.min.js"></script>
+    <script src="resources/js/speech/synthesize.js"></script>
+	  <script src="resources/js/speech/recognition.js"></script>
+    <script src="resources/js/conjoint.js"></script>
+    <script src="resources/js/portal.js"></script>
+    <script src="resources/js/response.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script type="text/javascript"> var key="${key}"; </script>
+    <script type="application/javascript">
+      // Internet Explorer 6-11
+      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+     
+      // Edge 20+
+      var isEdge = !isIE && !!window.StyleMedia;
+     
+      // Firefox 1.0+
+      var isFirefox = typeof InstallTrigger !== 'undefined';
+     
+      if(isIE == false && isFirefox == false) { 
+      } else {
+          $('#mySpeakerBtn i').removeClass('cpi-speaker');
+          $('#mySpeakerBtn i').addClass('cpi-speaker-off');
+          $('#mySpeakerBtn').addClass('disableMouseEvent');
+          $('#mySpeakerBtn').css('opacity','0.7');
+          $('.mic-btn i').removeClass('fa-microphone');
+          $('.mic-btn i').addClass('fa-microphone-slash');
+          $('.mic-btn').addClass('disableMouseEvent');
+          $('.mic-btn').css('opacity','0.7');
+          $('.overlaychat').css('z-index','999');
+          $('.dropdown').css('right','80px');
+      }
+    </script>
+</body>
+</html>
